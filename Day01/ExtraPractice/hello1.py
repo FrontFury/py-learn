@@ -72,3 +72,13 @@ query = "LI"
 for note in notes:
     if query.lower() in note["term"].lower():
         print("Found:", note["term"])
+
+
+def find_term(notes: list, name: str):
+    for note in notes:
+        if note["term"] == name:
+            return note
+    return None
+
+print(find_term(notes, "dict"))
+print(find_term(notes, "class"))

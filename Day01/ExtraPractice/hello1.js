@@ -73,3 +73,14 @@ for (const note of notes) {
     console.log("Found:", note.term);
   }
 }
+
+function findTerm(notes, name) {
+  for (const note of notes) {
+    if (note.term === name) {
+      return note;
+    }
+  }
+}
+
+console.log(findTerm(notes, "dict"));
+console.log(findTerm(notes, "class"));
